@@ -1,0 +1,47 @@
+{    
+    "MqttConfiguration":
+    {
+      "Ip": "localhost",
+      "Port": 1883
+    },
+
+
+    "Devices": 
+    {
+        "CLP":
+        {
+            "Ip": "localhost",
+            "Port": 502,
+            "TagsConfiguration":
+            {
+                "Tag1": {"SlaveId": 1, "FunctionId": 3, "RegisterAddress": 1, "Topic": "Teste1", "Storage": true },
+                "Tag5": {"SlaveId": 1, "FunctionId": 3, "RegisterAddress": 2, "Topic": "NodeRed/Teste1", "Storage": true },
+                "Tag6": {"SlaveId": 1, "FunctionId": 3, "RegisterAddress": 4, "Topic": "NodeRed/Teste2", "Storage": true },
+                "Tag2": {"SlaveId": 2, "FunctionId": 5, "RegisterAddress": 1, "Topic": "Teste2", "Storage": true }
+            }
+        },
+        "Modulo":
+        {
+            "Ip": "localhost",
+            "Port": 502,
+            "TagsConfiguration":
+            {
+                "Tag3": {"SlaveId": 3, "FunctionId": 3, "RegisterAddress": 3, "Topic": "Teste3", "Storage": false },
+                "Tag44": {"SlaveId": 3, "FunctionId": 3, "RegisterAddress": 7, "Topic": "Teste7", "Storage": false },
+                "Tag4": {"SlaveId": 2, "FunctionId": 3, "RegisterAddress": 3, "Topic": "Teste4", "Storage": false },
+                "Tag2": {"SlaveId": 2, "FunctionId": 3, "RegisterAddress": 4, "Topic": "Teste5", "Storage": true }
+            }
+        }
+    },
+
+    "MongoDB":
+    {   
+        "uri": "URI de acesso ao Cluster do MongoDb no Atlas",
+        "uri_password": "Senha da URI",
+        "HOST": "localhost",
+        "PORT": "27017",
+        "USERNAME": "Admin",
+        "PASSWORD": "password",
+        "DB_NAME":  "testeGatewayDB"
+    }
+}

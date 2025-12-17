@@ -1,0 +1,34 @@
+{    
+    "MqttConfiguration":
+    {
+      "Ip": "localhost",
+      "Port": 1883
+    },
+
+
+    "Devices": 
+    {
+        "CLP":
+        {
+            "Ip": "localhost",
+            "Port": 502,
+            "TagsConfiguration":
+            {
+                "Tag1": {"SlaveId": 1, "FunctionId": 3, "RegisterAddress": 7, "Topic": "Teste1" },
+                "Tag5": {"SlaveId": 1, "FunctionId": 3, "RegisterAddress": 1, "Topic": "NodeRed\\Teste1" },
+                "Tag6": {"SlaveId": 1, "FunctionId": 3, "RegisterAddress": 2, "Topic": "NodeRed\\Teste2" },
+                "Tag2": {"SlaveId": 2, "FunctionId": 5, "RegisterAddress": 882, "Topic": "Teste2" }
+            }
+        },
+        "Modulo":
+        {
+            "Ip": "127.0.0.1",
+            "Port": 502,
+            "TagsConfiguration":
+            {
+                "Tag3": {"SlaveId": 1, "FunctionId": 3, "RegisterAddress": 1234, "Topic": "Teste3" },
+                "Tag4": {"SlaveId": 1, "FunctionId": 4, "RegisterAddress": 344, "Topic": "Teste4" }
+            }
+        }
+    }
+}

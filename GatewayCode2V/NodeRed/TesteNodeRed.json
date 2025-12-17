@@ -1,0 +1,821 @@
+[
+    {
+        "id": "7e3acccafb717492",
+        "type": "tab",
+        "label": "TesteMqtt",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2493d55531684660",
+        "type": "tab",
+        "label": "TesteAcionamentoInversor1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "8c736fa1ca7dd1dc",
+        "type": "tab",
+        "label": "TesteAcionamentoInversor2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c27d62e5a838eb4a",
+        "type": "OPCUA-IIoT-Connector",
+        "discoveryUrl": "",
+        "endpoint": "opc.tcp://127.0.0.1:4840",
+        "endpointMustExist": false,
+        "keepSessionAlive": true,
+        "loginEnabled": false,
+        "name": "LOCAL SERVER",
+        "showErrors": false,
+        "securityPolicy": "None",
+        "securityMode": "None",
+        "individualCerts": false,
+        "publicCertificateFile": "",
+        "privateKeyFile": "",
+        "defaultSecureTokenLifetime": "",
+        "autoSelectRightEndpoint": false,
+        "strategyMaxRetry": "",
+        "strategyInitialDelay": "",
+        "strategyMaxDelay": "",
+        "strategyRandomisationFactor": "",
+        "requestedSessionTimeout": "",
+        "connectionStartDelay": "",
+        "reconnectDelay": "",
+        "maxBadSessionRequests": "10"
+    },
+    {
+        "id": "a0e3fa4ea59e071d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "3",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5a230a06a48b1489",
+        "type": "mqtt in",
+        "z": "7e3acccafb717492",
+        "name": "",
+        "topic": "NodeRed\\Teste1",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a0e3fa4ea59e071d",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "ad38ecd952eae800"
+            ]
+        ]
+    },
+    {
+        "id": "f99b290ac2321456",
+        "type": "mqtt out",
+        "z": "7e3acccafb717492",
+        "name": "",
+        "topic": "NodeRed\\Teste1",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 310,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "daa405534aafbff0",
+        "type": "inject",
+        "z": "7e3acccafb717492",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "f99b290ac2321456"
+            ]
+        ]
+    },
+    {
+        "id": "ad38ecd952eae800",
+        "type": "debug",
+        "z": "7e3acccafb717492",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "f6685f92d05b94d9",
+        "type": "debug",
+        "z": "7e3acccafb717492",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b5b3787d155c21d1",
+        "type": "debug",
+        "z": "7e3acccafb717492",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "9ff3ac7021a9e8a0",
+        "type": "function",
+        "z": "7e3acccafb717492",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3a9cbe41756fc16f",
+        "type": "inject",
+        "z": "2493d55531684660",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "b567e71a1d9f5d5c"
+            ]
+        ]
+    },
+    {
+        "id": "e379965e25cdcb7c",
+        "type": "mqtt in",
+        "z": "2493d55531684660",
+        "name": "",
+        "topic": "NodeRed\\Teste1",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a0e3fa4ea59e071d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "9d51ea15466e9ccd"
+            ]
+        ]
+    },
+    {
+        "id": "b567e71a1d9f5d5c",
+        "type": "mqtt out",
+        "z": "2493d55531684660",
+        "name": "",
+        "topic": "SelDriverClp",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 330,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9d51ea15466e9ccd",
+        "type": "debug",
+        "z": "2493d55531684660",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "d3d6efda2bba3cf7",
+        "type": "mqtt out",
+        "z": "2493d55531684660",
+        "name": "",
+        "topic": "ControlWordInversor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 500,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a8fa9e19f287b51f",
+        "type": "inject",
+        "z": "2493d55531684660",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "num",
+        "x": 230,
+        "y": 320,
+        "wires": [
+            [
+                "d3d6efda2bba3cf7"
+            ]
+        ]
+    },
+    {
+        "id": "f11edcf6d94c2270",
+        "type": "mqtt out",
+        "z": "2493d55531684660",
+        "name": "",
+        "topic": "ControlWordInversor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 500,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ad419cc50e967cb2",
+        "type": "inject",
+        "z": "2493d55531684660",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "7",
+        "payloadType": "num",
+        "x": 230,
+        "y": 380,
+        "wires": [
+            [
+                "f11edcf6d94c2270"
+            ]
+        ]
+    },
+    {
+        "id": "2da4f8c4eae1e692",
+        "type": "mqtt out",
+        "z": "2493d55531684660",
+        "name": "",
+        "topic": "ControlWordInversor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 500,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "847bb88fda6a7860",
+        "type": "inject",
+        "z": "2493d55531684660",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2063",
+        "payloadType": "num",
+        "x": 230,
+        "y": 500,
+        "wires": [
+            [
+                "2da4f8c4eae1e692"
+            ]
+        ]
+    },
+    {
+        "id": "10c7e3ecb06aa7ce",
+        "type": "mqtt out",
+        "z": "2493d55531684660",
+        "name": "",
+        "topic": "ControlWordInversor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 500,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "856810dd22bb6095",
+        "type": "inject",
+        "z": "2493d55531684660",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4111",
+        "payloadType": "num",
+        "x": 230,
+        "y": 620,
+        "wires": [
+            [
+                "10c7e3ecb06aa7ce"
+            ]
+        ]
+    },
+    {
+        "id": "69301c8846ab09db",
+        "type": "comment",
+        "z": "2493d55531684660",
+        "name": "Ligar Inversor",
+        "info": "",
+        "x": 130,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "68a0da2dd010e0d7",
+        "type": "comment",
+        "z": "2493d55531684660",
+        "name": "Preparar Inversor",
+        "info": "",
+        "x": 140,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "40589cb04dfdf72c",
+        "type": "comment",
+        "z": "2493d55531684660",
+        "name": "Chavear Inversor",
+        "info": "",
+        "x": 140,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6d4bcd8833d0147f",
+        "type": "comment",
+        "z": "2493d55531684660",
+        "name": "Parar Inversor",
+        "info": "",
+        "x": 130,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1d1c86baf8f945ac",
+        "type": "mqtt out",
+        "z": "2493d55531684660",
+        "name": "",
+        "topic": "FrequenciaInversor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 490,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "8b70e65b27d64c3d",
+        "type": "inject",
+        "z": "2493d55531684660",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "30",
+        "payloadType": "num",
+        "x": 230,
+        "y": 740,
+        "wires": [
+            [
+                "1d1c86baf8f945ac"
+            ]
+        ]
+    },
+    {
+        "id": "ce72ad923737d257",
+        "type": "comment",
+        "z": "2493d55531684660",
+        "name": "Mandar Frequencia Inversor",
+        "info": "",
+        "x": 180,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "54e3406c89894a20",
+        "type": "inject",
+        "z": "2493d55531684660",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 590,
+        "y": 200,
+        "wires": [
+            [
+                "b6ac7d88c7ccc190"
+            ]
+        ]
+    },
+    {
+        "id": "b6ac7d88c7ccc190",
+        "type": "mqtt out",
+        "z": "2493d55531684660",
+        "name": "",
+        "topic": "SelDriverClp",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 770,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "babd3abd6513e7e0",
+        "type": "inject",
+        "z": "8c736fa1ca7dd1dc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "a2cc6d225cb19e08"
+            ]
+        ]
+    },
+    {
+        "id": "02f5a0a75b42988d",
+        "type": "mqtt in",
+        "z": "8c736fa1ca7dd1dc",
+        "name": "",
+        "topic": "NodeRed\\Teste1",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a0e3fa4ea59e071d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "d580e4cd6c3d9c2c"
+            ]
+        ]
+    },
+    {
+        "id": "a2cc6d225cb19e08",
+        "type": "mqtt out",
+        "z": "8c736fa1ca7dd1dc",
+        "name": "",
+        "topic": "SelDriverClp",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 290,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d580e4cd6c3d9c2c",
+        "type": "debug",
+        "z": "8c736fa1ca7dd1dc",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1ef2ce0ec4263214",
+        "type": "mqtt in",
+        "z": "8c736fa1ca7dd1dc",
+        "name": "",
+        "topic": "StatusWordInversor",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a0e3fa4ea59e071d",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "540271625a155aae",
+        "type": "function",
+        "z": "8c736fa1ca7dd1dc",
+        "name": "function 2",
+        "func": "var numero_recebido = msg.payload\n\nvar resulCompBit0 = numero_recebido << 0 & 1\nvar resulCompBit0 = numero_recebido << 1 & 1\nvar resulCompBit6 = (1 << 6 & numero_recebido) \n\nif (resulCompBit6 !== 0) {\n    msg.payload = 6\n    return msg\n}\n\n\n\n\n\n    ",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 420,
+        "wires": [
+            [
+                "42a6c2365eb3a7ea"
+            ]
+        ]
+    },
+    {
+        "id": "0d6d62b1a3c0f6c2",
+        "type": "mqtt out",
+        "z": "8c736fa1ca7dd1dc",
+        "name": "",
+        "topic": "ControlWordInversor",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 740,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a424b08dc2b29f03",
+        "type": "inject",
+        "z": "8c736fa1ca7dd1dc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "32",
+        "payloadType": "num",
+        "x": 170,
+        "y": 420,
+        "wires": [
+            [
+                "540271625a155aae"
+            ]
+        ]
+    },
+    {
+        "id": "42a6c2365eb3a7ea",
+        "type": "debug",
+        "z": "8c736fa1ca7dd1dc",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 420,
+        "wires": []
+    }
+]

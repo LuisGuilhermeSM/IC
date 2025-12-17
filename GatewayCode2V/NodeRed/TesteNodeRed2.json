@@ -1,0 +1,173 @@
+[
+    {
+        "id": "ad6c3ac5672d35de",
+        "type": "tab",
+        "label": "TesteMqtt1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d3e761e1711812c4",
+        "type": "mqtt in",
+        "z": "ad6c3ac5672d35de",
+        "name": "",
+        "topic": "NodeRed\\Teste1",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a0e3fa4ea59e071d",
+        "nl": false,
+        "rap": false,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "1bca74ecca99479f"
+            ]
+        ]
+    },
+    {
+        "id": "b9fab1e7680811eb",
+        "type": "mqtt out",
+        "z": "ad6c3ac5672d35de",
+        "name": "",
+        "topic": "NodeRed\\Teste1",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 390,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "28042e17f7126fad",
+        "type": "inject",
+        "z": "ad6c3ac5672d35de",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "b9fab1e7680811eb"
+            ]
+        ]
+    },
+    {
+        "id": "1bca74ecca99479f",
+        "type": "debug",
+        "z": "ad6c3ac5672d35de",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "af27aca13e7cd3d0",
+        "type": "mqtt out",
+        "z": "ad6c3ac5672d35de",
+        "name": "",
+        "topic": "NodeRed\\Teste1",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a0e3fa4ea59e071d",
+        "x": 350,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "e3a9ea8b2c5b225b",
+        "type": "inject",
+        "z": "ad6c3ac5672d35de",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "40",
+        "payloadType": "num",
+        "x": 150,
+        "y": 320,
+        "wires": [
+            [
+                "af27aca13e7cd3d0"
+            ]
+        ]
+    },
+    {
+        "id": "a0e3fa4ea59e071d",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "3",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]

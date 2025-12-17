@@ -1,0 +1,49 @@
+{    
+    "MqttConfiguration":
+    {
+      "Ip": "localhost",
+      "Port": 1883
+    },
+
+
+    "Devices": 
+    {
+        "CLP":
+        {
+            "Ip": "10.0.0.3",
+            "Port": 502,
+            "TagsConfiguration":
+            {
+                "SelDriverCLP": {"SlaveId": 1, "FunctionId": 3, "RegisterAddress": 1325, "Topic": "SelDriverClp", "Storage": false },
+                "velocidadeMotor": {"SlaveId": 1, "FunctionId": 5, "RegisterAddress": 885, "Topic": "VelocidadeMotor", "Storage": true },
+                "velocidadeEsteira": {"SlaveId": 1, "FunctionId": 5, "RegisterAddress": 725, "Topic": "VelocidadeEsteira", "Storage": false }
+            }
+        },
+        "Modulo":
+        {
+            "Ip": "10.0.0.200",
+            "Port": 502,
+            "TagsConfiguration":
+            {
+                "ControlWordInversor": {"SlaveId": 3, "FunctionId": 3, "RegisterAddress": 8502, "Topic": "ControlWordInversor", "Storage": false },
+                "StatusWordInversor": {"SlaveId": 3, "FunctionId": 3, "RegisterAddress": 3202, "Topic": "StatusWordInversor", "Storage": false },
+                "FrequenciaInversor": {"SlaveId": 3, "FunctionId": 3, "RegisterAddress": 8503, "Topic": "FrequenciaInversor", "Storage": false },
+                "LeituraFrequenciaInversor": {"SlaveId": 3, "FunctionId": 3, "RegisterAddress": 3203, "Topic": "LeituraFrequenciaInversor", "Storage": false },
+                "SoftStart": {"SlaveId": 2, "FunctionId": 3, "RegisterAddress": 459, "Topic": "StatusWordSoftStart", "Storage": false },
+                "TeSysU": {"SlaveId": 4, "FunctionId": 3, "RegisterAddress": 456, "Topic": "StatusTeSysu", "Storage": false },
+                "PM850": {"SlaveId": 5, "FunctionId": 3, "RegisterAddress": 1120, "Topic": "tensaoFaseAB", "Storage": false }
+            }
+        }
+    },
+
+    "MongoDB":
+    {   
+        "uri": "mongodb+srv://lgsm4769:<db_password>@cluster0.6lqxlw0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+        "uri_password": "@IcCluster1236!",
+        "HOST": "localhost",
+        "PORT": "27017",
+        "USERNAME": "Admin",
+        "PASSWORD": "password",
+        "DB_NAME":  "testeGatewayDB"
+    }
+}
